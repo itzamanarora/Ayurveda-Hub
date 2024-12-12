@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class User_Cart {
 	
 
-//	@GetMapping("Cart_Item")
-//	public String Cart_Item() {
-//		return "Cart_Item";
-//	}
+	@GetMapping("Cart_Item")
+	public String Cart_Item() {
+		return "Cart_Item";
+	}
 }
