@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn Page - Ayurveda-Hub</title>
+    <link rel="stylesheet" href="CSS/Stylesheet.css">
+</head>
+
+<body>
+	<!--- Login Form Start -->
+    <div id="login" class="popup_2">
+        <div class="login-container">
+            <h2 class="section_title-1 ui text" style="letter-spacing: 1px; margin-bottom: 50px;">Log In</h2>
+            <form action="/login" method="POST">
+                <div class="input-group">
+                    <img src="IMG/Vector_Images/Mail.svg" alt="Email Icon" class="input-icon">
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group" style="margin-bottom: 0;">
+                    <img src="IMG/Vector_Images/Eye.svg" alt="Password Icon" class="input-icon">
+                    <input type="password" id="userPassword" name="userPassword" placeholder="Password" required>
+                </div>
+                <a href="" class="forget_pass ui">Forget Password?</a>
+                <button class="signin-button-2" type="submit">Sign In</button>
+            </form>
+            
+            <!-- Check Email and Password -->
+   			<script th:if="${param.success}">
+			    window.parent.location.href = "/"; // Ya kisi aur page par redirect karna ho
+			</script>
+			<script th:if="${param.error}">
+			    alert("Invalid Email or Password!");
+			    // Error handle karna
+			</script>
+			
+			
+            <p class="section_title-1 ui text size-textmd">or</p>
+            <br>
+            <button class="signin-button" onclick="openRegi(), closelogin()">Create an account?</button>
+            <p class="section_title-1 ui text size-textmd">or create account with</p>
+            <br>
+            <div class="social-buttons">
+                <button class="google">
+                    <img src="IMG/Vector_Images/Google_Icons-09-512 1.svg" alt="Google Icon" class="social-icon"> Google
+                </button>
+                <button class="facebook">
+                    <img src="IMG/Vector_Images/Facebook-icon.svg" alt="Facebook Icon" class="social-icon"> Facebook
+                </button>
+            </div>
+        </div>
+    </div>
+	<!--Login Form End-->
+    <!-- SignUp Form Start-->
+    <div id="regi" class="popup">
+        <div class="signup-container">
+            <h2 class="section_title-1 ui text" style="letter-spacing: 1px;">Sign Up</h2>
+            <form action="/saveUserDetails" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <img src="IMG/Vector_Images/User_icon-2.svg" alt="User Icon" class="input-icon">
+                    <input type="text" id="userName" name="userName" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <img src="IMG/Vector_Images/Mail.svg" alt="Email Icon" class="input-icon">
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Email" required>
+                </div>
+                <div class="input-group-1">
+                    <label for="gender" class="section_title-1 ui text size-textlg">Gender:</label>
+                    <select id="userGender" name="userGender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <img src="IMG/Vector_Images/Eye.svg" alt="Password Icon" class="input-icon"id="togglePassword" style="cursor: pointer;">
+                    <input type="password" id="userPassword" name="userPassword" placeholder="Password" required>
+                </div>
+                <script>
+                
+                	//View Password 
+                	
+                	const togglePassword = document.getElementById('togglePassword');
+				    const passwordField = document.getElementById('userPassword');
+				
+				    togglePassword.addEventListener('click', function () {
+				        // Toggling the type attribute
+				        const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+				        passwordField.setAttribute('type', type);
+				        
+				        // Change the image source or class when password is shown/hidden
+				        if (type === 'text') {
+				            togglePassword.src = "IMG/Vector_Images/Eyeoff.svg";  // Change to a "hide" eye image when showing password
+				        } else {
+				            togglePassword.src = "IMG/Vector_Images/Eye.svg";  // Change back to "eye" image when hiding password
+				        }
+				    });
+				    
+				</script>
+				
+				<!-- Password Validation Script -->
+			
+                <button class="signin-button-2" type="submit" onclick="return validatePassword()">Create an Account</button>
+            </form>
+            
+            <!-- After successful signup -->
+            <p style="color: var(--yellow_50); margin: 5px;" th:if="${param.success_save}" th:text="'SignUp Successful! Please Login.'"></p>
+   			<p style="color: red; margin: 5px;"  th:if="${param.error_save}" th:text="'Email already exists.'"></p>	
+   			
+   			
+   			<!-- Password settings -->
+            <p class="section_title-1 ui text size-textmd">or</p>
+            <br>
+            <button class="signin-button" onclick="openlogin(), closeRegi()">Already a memeber?</button>
+            <p class="section_title-1 ui text size-textmd" >or create account with</p>
+            <br>
+            <div class="social-buttons">
+                <button class="google">
+                    <img src="IMG/Vector_Images/Google_Icons-09-512 1.svg" alt="Google Icon" class="social-icon"> Google
+                </button>
+                <button class="facebook">
+                    <img src="IMG/Vector_Images/Facebook-icon.svg" alt="Facebook Icon" class="social-icon"> Facebook
+                </button>
+            </div>
+        </div>
+    </div>
+	<!-- SignUp form End-->
+	<script src="JS/script.js">
+	</script>
+</body>
+
+</html>s

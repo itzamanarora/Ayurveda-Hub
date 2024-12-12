@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="">
+<title>All Care Product - Ayurveda-Hub</title>
+<link rel="stylesheet" href="CSS/Stylesheet.css">
+<link rel="stylesheet" href="CSS/HoverEffect.css">
+<link rel="stylesheet" href="CSS/Animation.css">
+<link rel="stylesheet" href="CSS/Responsive.css">
+
+</head>
+
+<body>
+	<!-- ---------------Login Section Start------------- -->
+	<div id="signup" class="popup_2">
+		<div class="popup-content">
+			<img src="IMG/Vector_Images/X.svg" alt="Close Icon"
+				class="close-icon" onclick="closesignup(), openScroll()">
+			<iframe src="/login_signup.html" frameborder="0" class="popup-iframe"></iframe>
+		</div>
+	</div>
+	<!-- Login Section End -->
+	<div class="home">
+		<!-- Header Section -->
+		<header>
+			<!-- Top Navbar Menu  -->
+			<div class="header_top-navbar">
+				<div class="header_top-navbar-group container-sm">
+					<div class="header_contact-group">
+						<a href="#"> <img src="IMG/Vector_Images/call-image.svg"
+							alt="Call Image" class="header_contact-link">
+						</a>
+						<p class="header_contact-number ui text size-texts">+91
+							8958089580</p>
+					</div>
+					<p class="header_email ui text size-texts">|
+						Ayurvedahub@gmail.com</p>
+				</div>
+			</div>
+			<!-- Navbar Menu with Title -->
+			<div class="header_main-navbar-row" id="navbar">
+				<div class="header_main-navbar-group container-sm">
+					<div class="header_brand-group">
+						<div class="header_brand-row">
+							<a href="/">
+								<h2 class="header_brand-name ul heading size-headingxs">AYURVEDA
+									HUB</h2>
+							</a>
+							<div class="header_icons">
+								<a href="#"> <img src="IMG/Vector_Images/Search_icon.svg"
+									alt="Search Icon" class="header_contact-link-1">
+								</a> <a onclick="opensignup(), closeScroll()"
+									style="cursor: pointer;"> <img
+									src="IMG/Vector_Images/User_icon.svg" alt="User Icon"
+									class="header_contact-link-1">
+								</a> <a href="#"> <img src="IMG/Vector_Images/Heart_icon.svg"
+									alt="Heart Icon" class="header_contact-link-1"> <span
+									class="count-box">0</span>
+								</a> <a href="#"> <img
+									src="IMG/Vector_Images/Shopping cart_icon.svg" alt="Cart Icon"
+									class="header_contact-link-1"> <span class="count-box"
+									style="right: 21.5rem;">0</span>
+								</a>
+							</div>
+						</div>
+						<!-- List Navbar Menu  -->
+						<div class="header_menu-group">
+							<div class="header_menu-line"></div>
+							<ul class="header_menu-row">
+								<li><a href="HairCare_Product">
+										<p class="nav ui text size-textml">Hair</p>
+								</a> <!-- Dropdown list for Hair -->
+									<ul class="dropdown-content">
+										<li><a href="#">Shampoos</a></li>
+										<li><a href="#">Conditioners</a></li>
+										<li><a href="#">Hair Oils</a></li>
+										<li><a href="#">Serums</a></li>
+										<li><a href="#">Organic Hair Color</a></li>
+									</ul></li>
+								<li><a href="SkinCare_Product">
+										<p class="nav ui text size-textml">Skin</p>
+								</a> <!-- Dropdown list for Skin -->
+									<ul class="dropdown-content">
+										<li><a href="#">Face Wash & Cleansers</a></li>
+										<li><a href="#">Face Cream & Moisturizers</a></li>
+										<li><a href="#">Toners & Mists</a></li>
+										<li><a href="#">Masks</a></li>
+										<li><a href="#">Serums & Treatments</a></li>
+										<li><a href="#">Lip Care</a></li>
+										<li><a href="#">Face Oils</a></li>
+										<li><a href="#">Face Scrubs</a></li>
+									</ul></li>
+								<li><a href="HealthCare_Product">
+										<p class="nav ui text size-textml">Health</p>
+								</a></li>
+								<li><a href="/All_Product">
+										<p class="nav ui text size-textml"
+											style="color: #195e00; transform: scale(1.3);">All
+											Products</p>
+								</a></li>
+								<li><a href="#" target="_blank">
+										<p class="nav ui text size-textml">Community</p>
+								</a> <!-- Dropdown list for Community -->
+									<ul class="dropdown-content">
+										<li><a href="/Choose_Quiz">Take a Quiz</a></li>
+										<li><a href="#">Consult an Ayurvedhic Expert</a></li>
+										<li><a href="/E_Book">Download an E-Book</a></li>
+										<li><a href="#">Find a TheRapist</a></li>
+									</ul></li>
+								<li><a href="#" target="_blank">
+										<p class="nav ui text size-textml">About us</p>
+								</a></li>
+								<li><a href="#" target="_blank">
+										<p class="nav ui text size-textml">Account</p>
+								</a></li>
+							</ul>
+						</div>
+						<!-- List Navbar End-->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ----------Hair Care products title-------------- -->
+		<div class="text-section-1">
+			<div class="section container-sm">
+				<p class="section_title-1 ui text">E-Book</p>
+			</div>
+
+		</div>
+		<!-- ---------Products Navbar------------- -->
+		<div class="header_navigation-section">
+			<div class="header_navigation-group container-sm">
+				<a class="little_nav" href="Choose_Quiz">Take a Quiz</a>
+				<p class="little_nav">Consult an Ayurvedhic Expert</p>
+				<p class="little_nav">Download an E-Book</p>
+				<p class="little_nav">Find a TheRapist</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- -----------------Sale Message------------- -->
+	<div class="sale-section-1">
+		<div class="section container-sm">
+			<p class="section_title-1 ui text">SALE! Get 10% OFF on any item!</p>
+		</div>
+
+	</div>
+	</header>
+
+	<!-- ---------Product Section----------- -->
+
+	<div class="home-section-1">
+		<div class="product-dropdown container-sm">
+			<div class="product-dropdown_header">
+				<p class="product-dropdown_title ui text size-text3xl">E-Book</p>
+				<select
+					class="product-dropdown_dropdown ui selectbox size-text3xl fill round"
+					name="Sort Dropdown" id="">
+					<option value="option1">Best Seller</option>
+					<option value="option2">Recent Added</option>
+					<option value="option3">Price: High-to-Low</option>
+					<option value="option4">Price: Low-to-High</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="Home-section-2">
+		<div class="products container-sm">
+			<div class="product_column">
+				<div class="product_list">
+
+					<!-- Product-list  -->
+					<!-- <div class="product-card_item" th:each="product : ${Products}">
+                       <img th:src="${product.product_image_url != null and !#strings.isEmpty(product.product_image_url) ? '/IMG/Product-Images/' + product.product_image_url : '/IMG/301294.jpg'}" alt="Product Image" class="product-card_image">
+                        <div class="product-card_details">
+                            <p class="product-card_title ui text size-textxl" th:text=" ${product.product_title}" style="line-height: 2rem;"></p>
+                            <hr>
+                            <p class="product-desc ui text" style="text-align: center; font-family: Judson;" th:text="${product.product_desc}"></p>
+                            <div class="product-card_rating">
+                                <img src="IMG/Vector_Images/Star.svg" alt="Star Rating"
+                                    class="product-card_wishlist">
+                                <img src="IMG/Vector_Images/Star.svg" alt="Star Rating"
+                                    class="product-card_wishlist">
+                                <img src="IMG/Vector_Images/Star.svg" alt="Star Rating"
+                                    class="product-card_wishlist">
+                                <img src="IMG/Vector_Images/Star.svg" alt="Star Rating"
+                                    class="product-card_wishlist">
+                                <img src="IMG/Vector_Images/Star.svg" alt="Star Rating"
+                                    class="product-card_wishlist">
+                                <p class="ui text size-textmd">(1,235)</p>
+                            </div>
+                            
+                            <div class="product-card_pricing">
+                                <p class="product-card_mrp-value ui text">₹ <span th:text="${product.product_org_price}"></span>/-</p>
+                                <p class="product-card_mrp-label ui text"> ₹<span th:text="${product.product_prize}"></span>/- <span class="product-card_discount">10% OFF</span></p>
+                            </div>
+                        </div>
+                        <div class="product-card_action-5">
+                            <a href="http://" class="product-heart">
+                                <img src="IMG/Vector_Images/Heart_icon.svg" alt="Wishlist Icon"
+                                    class="product-card_heart">
+                            </a>
+                            <button class="cart-button">
+                                <span class="add-to-cart">Add to cart</span>
+                                <span class="added">Added</span>
+                                <i class="fas fa-shopping-cart"></i>
+                                <i class="fas fa-box"></i>
+                            </button>
+                        </div>
+					</div>
+                    <!-- Products list end  -->
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<!-- Line  -->
+				<div class="header_menu-line"></div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<!-- page -->
+				<div class="product-pagintaion">
+					<p class="product-page-number ui text size-textxl"
+						style="color: #1e1e1e;">1</p>
+					<p class="product-page-number ui text size-textxl">2</p>
+					<p class="product-page-number ui text size-textxl">3</p>
+					<p class="product-page-number ui text size-textxl">Next</p>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- -----------------Footer----------------------- -->
+	<footer class="footer">
+		<div>
+			<div class="footer_content">
+				<div class="footer_top">
+					<div class="footer_contact">
+						<p class="footer_title ui text size-textxl">Get in touch</p>
+						<p class="footer-cat ui text size-textxl">Categories</p>
+					</div>
+					<div class="footer_info">
+						<div class="footer_contact-details">
+							<a href="mailto:support@ayurvedahubs.co.in" target="_blank"
+								rel="noreferrer">
+								<p class="footer_email-link ui text size-textlg">support@ayurvedahubs.co.in
+								</p>
+							</a>
+							<p class="footer_address ui text size-textlg">
+								Ayurvedahubs Pvt. Ltd.,<br />29-A, Duhai Industrial Area, <br />Duhai,<br />Ghaziabad
+								- 201204
+							</p>
+							<p class="footer_phone-number ui text size-textlg">+91
+								8958089580</p>
+						</div>
+						<ul class="footer_categories">
+							<li><a href="All_products.html">
+									<p class="ui text size-textlg">Shop All</p>
+							</a></li>
+							<li><a href="Hair_Care_Products.html">
+									<p class="ui text size-textlg">Hair care</p>
+							</a></li>
+							<li><a href="Skin_Care_products.html">
+									<p class="ui text size-textlg">Skin Care</p>
+							</a></li>
+							<li><a href="Health_care.html">
+									<p class="ui text size-textlg">Health care</p>
+							</a></li>
+						</ul>
+					</div>
+					<div class="footer_newsletter">
+						<div class="footer_newsletter-group">
+							<p class="footer_title ui text size-textxl">Newsletter</p>
+							<p class="footer_address ui text size-textlg">Subscribe to
+								our Newsletter and Join Ayurvedhic-hub Famly today!</p>
+						</div>
+						<div class="footer_app-download">
+							<p class="footer_title ui text size-textxl">Download
+								Ayurveda-Hub App</p>
+							<a href="#"> <img
+								src="IMG/Vector_Images/google-play-badge.jpg"
+								alt="App Download Image">
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer_bottom">
+					<div class="footer_information">
+						<p class="footer_title ui text size-textxl">Information</p>
+						<ul class="footer_information-list">
+							<li><a href="#">
+									<p class="ui text size-textmd">About us</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">Terms and Conditions</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">Privacy Policy</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">Privacy Policy for Mobile
+										Apps</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">Shipping and Returns Policy
+									</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">International Delivery</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">For Business, Hotels and
+										Resorts</p>
+							</a></li>
+						</ul>
+					</div>
+					<div class="footer_quick-links">
+						<p class="footer_title ui text size-textxl">Quick Links</p>
+						<ul class="footer_information-list">
+							<li><a href="#">
+									<p class="ui text size-textmd">My Account</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">Track Your Order</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">Recycle Projects</p>
+							</a></li>
+							<li><a href="#">
+									<p class="ui text size-textmd">FAQs</p>
+							</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer_copyright">
+			<p class="footer_copyright-text ui text size-textlg">Copyright ©
+				2024 Ayurveda Hub</p>
+		</div>
+	</footer>
+	</div>
+	<script src="JS/script.js"></script>
+</body>
+
+</html>

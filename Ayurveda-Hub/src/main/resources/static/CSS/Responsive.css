@@ -1,0 +1,589 @@
+@import url("Stylesheet.css");
+
+/* --------------Media Queries---------------------- */
+
+/* Extra small devices (phones, 320px and up) */
+@media ( max-width : 320px) { /* Styles for extra small phones */
+	/* ------------------header Section---------------  */
+	.header_top-navbar {
+		padding: 5px;
+	}
+	.header_top-navbar-group {
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	.header_contact-number {
+		font-size: 0.7rem;
+	}
+	.header_email {
+		font-size: 0.7rem;
+	}
+	.header_brand-row {
+		margin-left: 2rem;
+	}
+	.header_brand-name {
+		width: 100%;
+		text-align: center;
+		font-size: 1.1rem;
+	}
+	.header_icons {
+		display: none;
+	}
+	.header_menu-row {
+		display: none;
+	}
+	.header_menu-line {
+		display: none;
+	}
+	.header_main-navbar-row {
+		padding-bottom: 0;
+	}
+	.count-box {
+		display: none;
+	}
+	.count-box-1 {
+		display: none;
+	}
+
+	/* --------------Text Section----------------- */
+	.section_title-1 {
+		font-size: 0.7rem;
+	}
+
+	/* ---------- Goverment section --------- */
+	.section_list {
+		gap: 5rem;
+	}
+	.govt-text {
+		font-size: var(--space-2xl);
+	}
+	.govt-text-1 {
+		font-size: var(--space-2xl);
+	}
+
+	/* -----------------list section -------------*/
+	.section_list-2 {
+		grid-template-columns: auto;
+		padding: 0.1rem;
+		row-gap: 2rem;
+	}
+	.choose-section {
+		padding: 1rem;
+	}
+	.choose-section-1 {
+		padding: 1rem;
+	}
+	.section_content-1 {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* Small devices (phones, 480px and up) */
+@media ( max-width : 480px) { /* Styles for standard smartphones */
+	/* ------------------header Section---------------  */
+	.header_top-navbar {
+		padding: 5px;
+	}
+	.header_top-navbar-group {
+		padding: 0;
+		display: flex;
+	}
+	.header_contact-number {
+		font-size: 0.7rem;
+	}
+	.header_email {
+		font-size: 0.7rem;
+	}
+	.header_brand-row {
+		margin-left: 3rem;
+	}
+	.header_brand-name {
+		width: 100%;
+		text-align: center;
+		font-size: 1.1rem;
+	}
+	.header_icons {
+		display: none;
+	}
+	.header_menu-row {
+		display: none;
+	}
+	.header_menu-line {
+		display: none;
+	}
+
+	.count-box {
+		display: none;
+	}
+	.count-box-1 {
+		display: none;
+	}
+
+	/* --------------Text Section----------------- */
+	.section_title-1 {
+		font-size: 0.7rem;
+	}
+
+	/* ---------- Goverment section --------- */
+	.section_list {
+		gap: 5rem;
+	}
+	.govt-text {
+		font-size: var(--space-2xl);
+	}
+	.govt-text-1 {
+		font-size: var(--space-2xl);
+	}
+
+	/* -----------------list section -------------*/
+	.section_list-2 {
+		grid-template-columns: auto;
+		padding: 0.1rem;
+		row-gap: 2rem;
+	}
+	.choose-section {
+		padding: 1rem;
+	}
+	.choose-section-1 {
+		padding: 1rem;
+	}
+	.section_content-1 {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.header_navigation-group{
+		padding-left:0;
+		padding-right:0;
+		gap: 1rem;
+	}
+	
+	.little_nav{
+		font-size: 0.8rem;
+	}
+	
+	/*----------------products----------------------*/
+	
+	.home-section-1{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.product-dropdown_header{
+		flex-direction: column;
+	}
+	
+	.product-dropdown_title {
+		margin-left:0;
+		font-size: 1.2rem;
+	}
+	
+	.product-dropdown_dropdown{
+		width: 10rem;
+	}
+	
+	.product_list{
+		grid-template-columns: auto auto;
+		width: 0px;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+	
+	.product-card_title{
+		font-size: 1rem;
+	}
+	
+	.product-desc {
+		font-size: 0.5rem;
+	}
+	
+	.product-card_mrp-value {
+		font-size: 0.8rem;
+	}
+	
+	.product-card_mrp-label {
+		font-size: 0.9rem;
+	}
+	
+	.product-card_discount{
+		font-size: 0.8rem;
+	}
+	
+	.product-heart{
+		height: 2.5rem;
+		width: 4rem;
+	}
+	
+	.product-heart img{
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+	
+	.product-card_action-5{
+		display: flex;
+		justify-content: flext-start;
+		align-items: flex-start;
+		margin-top: 2rem;
+	}
+	
+	.cart-button {
+		width: 100%;
+		height: 2.5rem;
+	}
+	
+	.cart-button span.add-to-cart {
+		font-size: 0.8rem;
+	}
+	
+	.cart-button span.added {
+		font-size: 0.8rem;
+	}
+	
+	.cart-button .fa-shopping-cart{
+		left: -15%;
+	}
+	
+	.Home-section-2 {
+		margin: 20px 20px;
+	}
+	.product-card_image{
+		height: 10rem;
+	}
+	
+	.product-card_item{
+		width: 10.5rem;
+		height: auto;
+	}
+
+	/* -------------- footer ------------------ */
+	.footer_content {
+		flex-direction: column;
+	}
+	.footer_info {
+		flex-direction: column;
+		width: 10rem;
+	}
+	footer_newsletter {
+		flex-direction: column;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media ( max-width : 768px) {
+	/* Styles for small tablets and phablets */
+	/* ------------------header Section---------------  */
+	.header_top-navbar {
+		padding: 5px;
+	}
+	.header_top-navbar-group {
+		padding: 0;
+		display: flex;
+	}
+	.header_contact-number {
+		font-size: 0.7rem;
+	}
+	.header_email {
+		font-size: 0.7rem;
+	}
+	.header_brand-row {
+		margin-left: 4rem;
+	}
+	.header_brand-name {
+		width: 100%;
+		text-align: center;
+		font-size: 1.1rem;
+	}
+	.header_icons {
+		display: none;
+	}
+	.header_menu-row {
+		display: none;
+	}
+	.header_menu-line {
+		display: none;
+	}
+	.count-box {
+		display: none;
+	}
+	.count-box-1 {
+		display: none;
+	}
+	/* --------------Slide image ---------------*/
+	.desktop-slide {
+		display: none;
+	}
+	.mobile-slide {
+		display: block;
+	}
+
+	/* --------------Text Section----------------- */
+	.section_title-1 {
+		font-size: 0.8rem;
+	}
+
+	/* ---------- Goverment section --------- */
+	.section_list {
+		gap: 5rem;
+	}
+	.govt-text {
+		font-size: var(--space-2xl);
+	}
+	.govt-text-1 {
+		font-size: var(--space-2xl);
+	}
+
+	/* -----------------list section -------------*/
+	.section_list-2 {
+		grid-template-columns: auto;
+		padding: 0.1rem;
+		row-gap: 2rem;
+	}
+	.choose-section {
+		padding: 1rem;
+	}
+	.choose-section-1 {
+		padding: 1rem;
+	}
+	.section_content-1 {
+		display: flex;
+		flex-direction: column;
+	}
+	.section-4 {
+		gap: 1rem;
+	}
+	.section_stats {
+		gap: 2px;
+		flex-direction: column;
+	}
+	section_stats-image {
+		height: 20rem;
+	}
+	
+	/* -----------Home expertise section---------*/
+	
+	.expertise-section_group--secondary {
+		flex-direction: column;
+	}
+
+	/* ----------------footer ---------------*/
+	.footer_copyright {
+		padding: 10px 20px;
+	}
+	.footer_copyright-text {
+		font-size: 0.8rem;
+	}
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media ( min-width : 1024px) {
+	/* Styles for tablets in landscape mode and desktops */
+	/* ------------------header Section---------------  */
+	.header_main-navbar-group {
+		padding-left: var(--space-3xl);
+		padding-right: var(--space-3xl);
+	}
+	.header_brand-row {
+		margin-right: 5rem;
+	}
+	.header_menu-line {
+		width: 60rem;
+	}
+	.header_top-navbar-group {
+		padding-left: var(--space-3xl);
+		padding-right: var(--space-3xl);
+		display: flex;
+		gap: var(--space-sm);
+		justify-content: center;
+	}
+
+	/* -------------------Video section ------------*/
+	.ayurveda-co-in-2 {
+		height: auto;
+	}
+
+	/* --------------Text Section----------------- */
+	.section_title-1 {
+		font-size: 1.2rem;
+	}
+
+	/* ---------- Goverment section --------- */
+	.section_list {
+		width: 100%;
+		height: auto;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+	}
+	.govt-text {
+		font-size: var(--space-4xl);
+	}
+	.govt-text-1 {
+		font-size: var(--space-4xl);
+	}
+
+	/* -----------------list section -------------*/
+	.section_list-2 {
+		grid-template-columns: auto auto auto;
+	}
+	.section-3 {
+		padding-left: var(--space-3xl);
+		padding-right: var(--space-3xl);
+	}
+	.footer_contact {
+		width: 100%;
+	}
+	.skin-care-product-dropdown {
+		padding-left: var(--space-3xl);
+		padding-right: var(--space-3xl);
+	}
+	.skin-care-product-dropdown_header {
+		width: 100%;
+	}
+	.hair-car-1 {
+		padding-left: var(--space-3xl);
+		padding-right: var(--space-3xl);
+	}
+
+	/* ----------------footer ---------------*/
+	.footer_copyright {
+		padding: 10px 20px;
+	}
+	.footer_copyright-text {
+		font-size: 0.8rem;
+	}
+}
+
+/* Extra large devices (large desktops, 1440px and up) */
+@media ( min-width : 1440px) {
+	/* Styles for large desktops and monitors */
+	/* ------------------header Section---------------  */
+	.header_brand-row {
+		margin-left: 30rem;
+	}
+	.header_menu-line {
+		width: 70rem;
+	}
+	.count-box {
+		right: 12rem;
+	}
+	.count-box-1 {
+		right: 9.5rem;
+	}
+
+	/* -------------------Video section ------------*/
+
+	/* --------------Text Section----------------- */
+	.section_title-1 {
+		font-size: 1.5rem;
+	}
+
+	/* ---------- Goverment section --------- */
+	.section_list {
+		gap: 15rem;
+	}
+	.govt-text {
+		font-size: var(--space-6xl);
+	}
+	.govt-text-1 {
+		font-size: var(--space-6xl);
+	}
+
+	/* -----------------list section -------------*/
+	.section_list-2 {
+		grid-template-columns: auto auto auto auto auto;
+	}
+	.section-3 {
+		padding-left: var(--space-3xl);
+		padding-right: var(--space-3xl);
+	}
+}
+
+/* Ultra-large devices (large monitors, 1920px and up) START*/
+@media ( min-width : 1920px) {
+	/* Styles for ultra-wide monitors */
+	/* ------------------header Section---------------  */
+	.header_brand-row {
+		margin-left: 30rem;
+	}
+	.header_menu-line {
+		width: 70rem;
+	}
+	.count-box {
+		right: 26.5rem;
+	}
+	.count-box-1 {
+		right: 24rem;
+	}
+
+	/* -------------------Video section ------------*/
+	
+	/* --------------Slide image ---------------*/
+	.desktop-slide {
+		display: block;
+	}
+	.mobile-slide {	
+		display: none;
+	}
+	
+
+	/* --------------Text Section----------------- */
+	.section_title-1 {
+		font-size: 1.5rem;
+	}
+
+	/* ---------- Goverment section --------- */
+	.section_list {
+		gap: 15rem;
+	}
+	.govt-text {
+		font-size: var(--space-6xl);
+	}
+	.govt-text-1 {
+		font-size: var(--space-6xl);
+	}
+
+	/* -----------------list section -------------*/
+	.section_list-2 {
+		grid-template-columns: auto auto auto auto auto;
+	}
+	.section-3 {
+		padding-left: var(--space-3xl);
+		padding-right: var(--space-3xl);
+	}
+	
+	
+	/*----------------products----------------------*/
+	
+	.product-card_title {
+		font-size: 1.7rem;
+		line-height: 2rem;
+	}
+	
+	.product-dropdown_header {
+		justify-content: center;
+	}
+	
+	.product-dropdown_dropdown {
+	
+		float: right;
+	}
+	.product-dropdown_title {
+		margin-left:0;
+		font-size: 2.5rem;
+	}
+
+	/* ----------------footer ---------------*/
+	.footer_contact {
+		justify-content: space-between;
+	}
+	.footer_copyright-text {
+		font-size: 1.2rem;
+	}
+	
+	.bottom-container {
+		display: none;
+	}
+	/* Ultra-large devices (large monitors, 1920px and up) END */
+}

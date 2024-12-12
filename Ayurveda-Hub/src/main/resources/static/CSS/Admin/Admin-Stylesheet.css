@@ -1,0 +1,378 @@
+@import url('/CSS/Stylesheet.css');
+@import url('/Fonts/Judson-Regular.ttf');
+
+body {
+    overflow: hidden;
+}
+.home{
+    height: 0;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+/* -----------------Sidebar CSS------------- */
+.sidebar {
+    background-color: var(--yellow_50);
+    width: 25rem;
+    height: 100vh;
+    position: fixed;
+    top: 11.95rem;
+}
+.sidebar_menu{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+}
+
+.sidebar_text{
+    padding: 13px 20px;
+    font-size: 1.7rem;
+    background-color: var(--yellow_50);
+    color: var(--green_800);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar_text:hover {
+    background-color: var(--green_800);
+    color: var(--yellow_50);
+}
+
+/* CSS for slider container and images */
+.slider-container {
+    position: relative;
+    width: 17.5rem;
+    height: 17.5rem;
+    margin: auto;
+    overflow: hidden; /* Hide images that are not in view */
+}
+
+.slider-images {
+    display: flex;
+    width: 100%; /* Since we have 3 images, 3 * 100% = 300% */
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 100%; /* Make each image take up full container width */
+    display: block;
+}
+
+.slider-container:hover .slider-images {
+    animation-play-state: paused;
+}
+
+/* --------------Dashboard CSS--------------- */
+
+.dashboard_row{
+    overflow-y: scroll;
+    left: 400px;
+    top: 190px;
+    height: 100vh;
+    width: 79.4%;
+    padding-bottom: 20vh;
+    position: relative;
+    background-size: 70rem;
+    background-position: 400px 40px;
+    background-repeat: no-repeat;
+    flex: 1; 
+}
+
+.dashboard_grid {
+    display: grid;
+    margin-top: 60px;
+    margin-left: 70px;
+    gap: 60px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dashboard_box {
+    padding: 20px;
+    height: 12rem;
+    width: auto;
+    background-color: var(--green_800);
+    box-shadow: 2px 2px 10px black;
+}
+
+.dashboard_box-1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    padding: 20px;
+    height: auto;
+    width: 24rem;
+    background-color: var(--green_800);
+    box-shadow: 2px 2px 10px black;
+}
+
+/* ------------------------dashboard CSS End----------------- */
+
+/* ---------------Dashboard pannel----------- */
+.dashboard_box_text{
+    color: var(--yellow_50);
+    font-size: 1.7rem;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dashboard_box_text-2{
+    color: var(--yellow_50);
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------order pannel---------- */
+
+.pannel {
+    margin-top: 20px;
+    width: auto;
+}
+.pannel_heading{
+    color: var(--green_800);
+    font-size: 3rem;
+    text-align: center;
+}
+
+.pannel_text{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Text1{
+    font-size: 1.5rem;
+    color: var(--green_800);
+    margin-left: 100px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.Text2{
+    font-size: 1.5rem;
+    color: var(--green_800);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.Text3{
+    font-size: 1.5rem;
+    color: var(--green_800);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-right: 20rem;
+}
+
+
+/* ----------------- Pannel Container --------------- */
+
+.pannel_container {
+    background-color: var(--green_800);
+    display: flex;
+    flex-direction: row;
+    width: 90rem;
+    height: 20rem;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.list_image {
+    width: 280px;
+    height: 280px;
+}
+.list_image img{
+	height: 100%;
+}
+
+.vl {
+    margin-left: 40px;
+    border-left: 1px solid var(--yellow_50);
+    height: 280px;
+}
+
+.pannel_inner_container{
+    padding: 20px;
+    height: 280px;
+    width: 300px;
+}
+
+
+
+/* ---------------------Product info------------------ */
+.product_info{
+    color: var(--yellow_50);
+    font-size: 1.5rem;
+}
+
+/* --------------Button------------- */
+
+.product_button{
+    background-color: var(--yellow_50);
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    border: 0;
+}
+
+.product_button img{
+    padding: 10px;
+}
+
+.product_button_2{
+    margin-left: 10px;
+    background-color: red;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    border: 0;
+}
+
+
+/* ----------------input fields-----------------------  */
+
+.cat_field{
+    background-color: var(--yellow_50);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50rem;
+    height: auto;
+    padding-top: 5rem;
+    margin-bottom: 20rem;
+    margin-top: 2rem;
+    margin-left: 20%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.admin_input{
+    padding: 5px;
+    margin-bottom: 50px;   
+}
+
+.admin_input_label {
+    color: var(--green_800);
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.admin_input_fields{
+    margin-top: 10px;
+    font-size: 1.4rem;
+    width: 500px;
+    background-color: rgba(59, 100, 58, 0.5);
+    border: 1px solid var(--yellow_50);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.admin-submit {
+    margin-top: 90px;
+    font-size: 1.4rem;
+    color: var(--yellow_50);
+    background-color: var(--green_800);
+    border: none;
+    width: 200px;
+    height: 50px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.admin-submit-1 {
+    margin-top: 90px;
+    font-size: 1.4rem;
+    color: var(--green_800);
+    background-color: var(--yellow_50);
+    border: none;
+    width: 200px;
+    height: 50px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-submit-2 {
+    margin-top: 90px;
+    font-size: 1.4rem;
+    color: white;
+    background-color: red;
+    border: none;
+    width: 200px;
+    height: 50px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-small_button{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: var(--green_800);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+   	float: right;
+   	margin: 0px 1.5rem;
+}
+
+.admin-small_button_edit{
+    height: 2.5rem;
+	width: 2.5rem;
+    background-color: var(--yellow_50);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+   	float: right;
+   	margin: 0px 2.5rem;
+}
+
+.admin-small_button_exit{
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: red;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+   	float: right;
+   	margin: 0px 2.5rem;
+}
+
+.admin-small_button_edit:hover {
+	background-color: rgb(189, 178, 135);
+}
+
+.admin-small_button_exit:hover{
+	 background-color: rgb(128, 0, 0);
+}
+
+.admin-small_button:hover{
+    background-color: rgb(51, 88, 51);
+}
+
+.admin-submit-1:hover{
+    color: var(--yellow_50);
+    background-color: var(--green_800);
+}
+
+.admin-submit-2:hover{
+    background-color: rgb(128, 0, 0);
+}
+
+
+.admin-submit:hover{
+    background-color: var(--yellow_50);
+    color: var(--green_800);
+}
+
+.edit_buttons {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.edit_buttons img {
+	margin: 0px 1rem;
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayurveda Hub - Traditional Remedies for Modern Wellbeing</title>
+<link rel="stylesheet" href="CSS/Stylesheet.css">
+<link rel="stylesheet" href="CSS/HoverEffect.css">
+<link rel="icon" type="icon" href="/IMG/Vector_Images/clove.svg">
+<link rel="stylesheet" href="CSS/Responsive.css">
+</head>
+
+<body>
+	<!-- ---------------Login Section Start------------- -->
+	<div id="signup" class="popup_2">
+		<div class="popup-content">
+			<img src="IMG/Vector_Images/X.svg" alt="Close Icon"
+				class="close-icon" onclick="closesignup(), openScroll()">
+			<iframe src="/login_signup" frameborder="0" class="popup-iframe"></iframe>
+		</div>
+	</div>
+	<!-- Login Section End -->
+	<!-- Navbar Section Start -->
+	<div class="home">
+		<!-- Header Section -->
+		<header>
+			<!-- Top Navbar Menu  -->
+			<div id="nav">
+			<div class="header_top-navbar">
+				<div class="header_top-navbar-group container-sm">
+					<div class="header_contact-group">
+						<a href="#"> <img src="IMG/Vector_Images/call-image.svg"
+							alt="Call Image" class="header_contact-link">
+						</a>
+					</div>
+					<p class="header_email ui text"><strong>+</strong>91 8958089580 | Ayurvedahub@gmail.com</p>
+				</div>
+			</div>
+			<!-- Navbar Menu with Title -->
+			<div class="header_main-navbar-row">
+				<div class="header_main-navbar-group container-sm">
+					<div class="header_brand-group">
+						<div class="header_brand-row">
+							<a href="/">
+								<h2 class="header_brand-name ul heading size-headingxs">AYURVEDA
+									HUB</h2>
+							</a>
+							<div class="header_icons">
+								<a href="#"> <img src="IMG/Vector_Images/Search_icon.svg"
+									alt="Search Icon" class="header_contact-link-1">
+								</a> <a onclick="opensignup(), closeScroll()"
+									style="cursor: pointer;"> <img
+									src="IMG/Vector_Images/User_icon.svg" alt="User Icon"
+									class="header_contact-link-1">
+								</a> <a href="#" class="icon_container"> <img src="IMG/Vector_Images/Heart_icon.svg"
+									alt="Heart Icon" class="header_contact-link-1"> <span
+									class="count-box">0</span>
+								</a> <a href="#" class="icon_container"> <img
+									src="IMG/Vector_Images/Shopping cart_icon.svg" alt="Cart Icon"
+									class="header_contact-link-1"> <span class="count-box-1">0</span>
+								</a>
+							</div>
+						</div>
+						<!-- List Navbar Menu  -->
+						<div class="header_menu-group">
+							<div class="header_menu-line"></div>
+							<ul class="header_menu-row">
+								<li><a href="/HairCare_Product">
+										<p class="nav ui text size-textml">Hair</p>
+								</a> <!-- Dropdown list for Hair -->
+									<ul class="dropdown-content">
+										<li th:each="haircategory : ${Category}"><a
+											href="/HairCare_Product"
+											th:text="${haircategory.categoryname}"></a></li>
+									</ul></li>
+								<li><a href="/SkinCare_Product">
+										<p class="nav ui text size-textml">Skin</p>
+								</a> <!-- Dropdown list for Skin -->
+									<ul class="dropdown-content">
+										<li th:each="skincategory : ${Category2}"><a
+											href="/SkinCare_Product"
+											th:text="${skincategory.categoryname}"></a></li>
+									</ul></li>
+								<li><a href="/Healthcare_Product">
+										<p class="nav ui text size-textml">Health</p>
+								</a> <!-- Dropdown list for Health -->
+									<ul class="dropdown-content">
+										<li th:each="skincategory : ${Category3}"><a
+											href="/HealthCare_Product"
+											th:text="${skincategory.categoryname}"></a></li>
+									</ul></li>
+								<li><a href="/All_Product">
+										<p class="nav ui text size-textml">All Products</p>
+								</a></li>
+								<li><a>
+										<p class="nav ui text size-textml">Community</p>
+								</a> <!-- Dropdown list for Community -->
+									<ul class="dropdown-content">
+										<li><a href="Choose_Quiz">Take a Quiz</a></li>
+										<li><a href="ComingSoon">Consult an Ayurvedhic Expert</a></li>
+										<li><a href="E_Book">Download an E-Book</a></li>
+										<li><a href="ComingSoon">Find a TheRapist</a></li>
+									</ul></li>
+								<li><a href="ComingSoon">
+										<p class="nav ui text size-textml">About us</p>
+								</a></li>
+								<li><a href="ComingSoon">
+										<p class="nav ui text size-textml">Account</p>
+								</a></li>
+							</ul>
+						</div>
+						<!-- List Navbar End-->
+					</div>
+				</div>
+			</div>
+			</div>
+			<!-- -----------------Sale Message------------- -->
+			<div class="sale-section-1">
+				<div class="section container-sm">
+					<p class="section_title-1 ui text">SALE! Get 10% OFF on any
+						item!</p>
+				</div>
+
+			</div>
+		</header>
+		<div>
+			<!-- Navbar Section End  -->
+			<!-- ---Home Video section Start--- -->
+			<div>
+				<div class="home-section">
+					<video class="ayurveda-co-in-2" autoplay loop muted
+						poster="IMG/Ayurveda.jpg">
+						<source src="IMG/BG-Image/videoplayback1.mp4" type="video/mp4">
+						<p>Your browser does not support the video tag.</p>
+					</video>
+				</div>
+			</div>
+			<!-- Home Video Section End  -->
+
+			<!--  Text  -->
+			<div class="text-section-1">
+				<div class="section container-sm">
+					<p class="section_title-1 ui text">Experience Ayurveda's
+						healing power for mind, body, and spirit.</p>
+				</div>
+			</div>
+
+			<!-- ---Home Image section Start--- -->
+			<div class="slideshow-container"
+				style="background-color: var(--yellow_50)">
+				<div class="mySlides fade">
+					<!-- 1st Image -->
+					<img class="desktop-slide" src="IMG/BG-Image/Ayurveda.jpg"
+						style="width: 100%">
+					<!-- 1st Image -->
+					<img class="mobile-slide"
+						src="IMG/BG-Image/Mobile/Avocado-Shampoo-Banner_a3ad87fe-48c4-4d8b-be53-3c3aab246152.webp"
+						style="width: 100%">
+				</div>
+
+				<div class="mySlides fade">
+					<!-- 2nd Image -->
+					<img class="desktop-slide"
+						src="IMG/BG-Image/Monsoon_Offer_web.webp" style="width: 100%">
+					<img class="mobile-slide"
+						src="IMG/BG-Image/Mobile/Clearance-Sale_Website_mobile_02.webp"
+						style="width: 100%">
+				</div>
+
+				<div class="mySlides fade">
+
+					<!-- 3rd Image -->
+					<img class="desktop-slide"
+						src="IMG/BG-Image/Serum-Home-page-Banner.webp" style="width: 100%">
+					<img class="mobile-slide"
+						src="IMG/BG-Image/Mobile/Monsoon_Offer_mb.webp"
+						style="width: 100%">
+				</div>
+
+				<div class="mySlides fade">
+					<!-- 4th Image -->
+					<img class="desktop-slide"
+						src="IMG/BG-Image/Ayurvedic-Powder-Range-Home-Page-Banner.webp"
+						style="width: 100%"> <img class="mobile-slide"
+						src="IMG/BG-Image/Mobile/Natural-_-Ayurvedic-Power-Range-Home-Page-Banner.webp"
+						style="width: 100%">
+				</div>
+			</div>
+			<div style="text-align: center">
+				<span class="dot"></span> <span class="dot"></span> <span
+					class="dot"></span> <span class="dot"></span>
+			</div>
+			<!-- Home Image Section End  -->
+			<!--  Text  -->
+			<div class="text-section-1">
+				<div class="section container-sm">
+					<p class="section_title-1 ui text">Discover natural wellness
+						through Ayurveda for balanced, healthy living.</p>
+				</div>
+			</div>
+			<!-- goverment endorsement section Start  -->
+			<div>
+				<div class="govt-section">
+					<div class="section-3">
+						<div class="section_list">
+							<div class="AYUSH_logo">
+								<img src="IMG/NE_Preview1.png" alt="Preview Image"
+									class="user-profile_image">
+								<p class="govt-text-1">
+									Ministry of<br />AYUSH
+								</p>
+							</div>
+							<div class="USFDA_logo">
+								<img src="IMG/png-transparent-fda-hd-logo-thumbnail.png"
+									alt="Preview Image" class="user-profile_image">
+								<p class="govt-text">
+									USFDA<br />approved
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- goverment endorsement section End  -->
+			<!-- Text Section 1  -->
+			<div class="text-section-1">
+				<div class="section container-sm">
+					<p class="section_title-1 ui text">
+						<span>Addressing the Root Cause&nbsp;</span> <span
+							class="section_title-span">Since 2020</span> <span>
+							&nbsp;with&nbsp;</span> <span class="section_title-span"> 4+
+							Years of In-house Expertise&nbsp;</span>
+					</p>
+				</div>
+			</div>
+			<!-- product categories section  Start-->
+			<div>
+				<div class="choose-section">
+					<div class="section-4">
+						<div class="section-5 container-sm">
+							<p class="section_title-3 ui text">Choose what to solve</p>
+							<p class="mid-sec-text ui text">we've got you covered!</p>
+						</div>
+						<div class="section_content-1">
+							<div class="section_list-2">
+								<a href="ComingSoon" class="user-profile2"> <img
+									src="IMG/Temp/Period Health.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content">
+										<p class="user-profile_title-2 ui text">Women</p>
+										<p class="section_feature-subtitle ui text">
+											Period <br />Health
+										</p>
+									</div>
+								</a> <a href="ComingSoon" class="user-profile2"> <img
+									src="IMG/Temp/Bad Mental Health.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content">
+										<p class="user-profile_title-2 ui text">All genders</p>
+										<p class="section_feature-subtitle ui text">
+											Mental <br />Health
+										</p>
+									</div>
+								</a> <a href="ComingSoon" class="user-profile2"> <img
+									src="IMG/Temp/Hair_Women.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content">
+										<p class="user-profile_title-2 ui text">All genders</p>
+										<p class="section_feature-subtitle ui text">
+											Hair <br />Health
+										</p>
+									</div>
+								</a> <a href="ComingSoon" class="user-profile2"> <img
+									src="IMG/Temp/HealthyFood.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content">
+										<p class="user-profile_title-2 ui text">All genders</p>
+										<p class="section_feature-subtitle ui text">
+											Healthy <br />Food
+										</p>
+									</div>
+								</a> <a href="ComingSoon" class="user-profile2"> <img
+									src="IMG/Temp/Bad Sexual Health.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content">
+										<p class="user-profile_title-2 ui text">Men</p>
+										<p class="section_feature-subtitle ui text">
+											Sexual <br />Health
+										</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Product categories Section End  -->
+				<!-- Text Section 2 -->
+				<div class="text-section-1">
+					<div class="section container-sm">
+						<p class="section_title-1 ui text">Traditional remedies for
+							modern lifes</p>
+					</div>
+				</div>
+
+				<!-- Other elements section Start   -->
+				<div>
+					<div class="choose-section-1">
+						<div class="section-4">
+							<div class="section-5 container-sm">
+								<p class="section_title-3 ui text">People Trust US</p>
+								<p class="mid-sec-text ui text">because we go one step ahead</p>
+							</div>
+							<div class="section_content-1">
+								<a href="Choose_Quiz" class="user-profile2"> <img
+									src="IMG/Temp/Quizz.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content-1">
+										<p class="section_feature-subtitle-1 ui text size-textxl">Quizzes
+										</p>
+									</div>
+								</a> <a href="ComingSoon" class="user-profile2"> <img
+									src="IMG/Temp/Doctor.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content-1">
+										<p class="section_feature-subtitle-1 ui text size-textxl">Doctors</p>
+									</div>
+								</a> <a href="E_Book" class="user-profile2"> <img
+									src="IMG/Temp/Ebook.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content-1">
+										<p class="section_feature-subtitle-1 ui text size-textxl">Ebooks</p>
+									</div>
+								</a> <a href="ComingSoon" class="user-profile2"> <img
+									src="IMG/Temp/Article.jpg" alt="Featured Image"
+									class="user-profile_image-2">
+									<div class="user-profile_content-1">
+										<p class="section_feature-subtitle-1 ui text size-textxl">Articles</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<!-- Other Element Section End  -->
+
+					<!-- Text section 3  -->
+					<div>
+						<div class="text-section-1">
+							<div class="section container-sm">
+								<p class="section_title-1 ui text">Pure and natural
+									Ayurvedic products for your wellbeing.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- lifestyle impact section Start -->
+					<div>
+						<div class="section-2">
+							<div class="section_content container-sm">
+								<div class="section_group">
+									<p class="section_title-3 ui text">Poor lifestyle is a
+										major health concern today</p>
+									<div class="section_stats">
+										<img src="IMG/Temp/stats_copy.webp" alt="Overall Stats Image"
+											class="section_stats-image" />
+										<div class="section_stats-group">
+											<img src="IMG/Temp/hair_stat_copy.avif"
+												alt="Hair Stats Image" class="section_stats-image--hair"
+												style="border-radius: var(--radius-md);"> <img
+												src="IMG/Temp/skin_stats.avif" alt="Skin Stats Image"
+												class="section_stats-image--hair"
+												style="border-radius: var(--radius-md);" />
+										</div>
+										<img src="IMG/Temp/mental_illness_stats_copy.webp"
+											alt="Mental Health Image" class="section_stats-image--mental">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Expertise and Value Section  -->
+					<div class="expertise-section">
+						<div class="expertise-section_content">
+							<div class="expertise-section_column container-sm">
+								<div class="expertise-section_group">
+									<p class="section_title-3 ui text">Health is Beauty</p>
+									<p class="mid-sec-text ui text">we offer both
+										application-based and consumable for holistic healing inside
+										out.</p>
+								</div>
+								<div class="expertise-section_group--secondary">
+									<div class="expertise-section_column--secondary">
+										<p class="expertise-section_highlight ui text size-text5xl">4+
+											Years of Expertise</p>
+										<p class="expertise-section_description ui text size-textxl">
+											Amrutam brings along decades-long experience and expertise in
+											the Ayurveda Industry. Inspired by the Vedic Principles and
+											being in sync with nature, our unique and authentic
+											formulations are infused with raw herbs that address the root
+											cause of the problem instead of just treating the symptoms. <br />
+											<br />We are cruelty-free, ethically-sourced and lovingly
+											curated one-stop solution for your health and beauty needs.
+											Certified by the Ministry of AYUSH, PETA and USFDA.
+										</p>
+									</div>
+									<img src="IMG/Temp/amrutam_features2.webp"
+										alt="Expertise Image" class="expertise-section_image">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- lifestyle impact section End -->
+
+					<!-- Text Section 4  -->
+					<!-- Ayurveda invitation section  -->
+					<div>
+						<div class="text-section-1">
+							<div class="section container-sm">
+								<p class="section_title-1 ui text">Experience the harmony of
+									Ayurveda in your life.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Footer  -->
+					<footer class="footer">
+						<div>
+							<div class="footer_content">
+								<div class="footer_top">
+									<div class="footer_contact">
+										<p class="footer_title ui text size-textxl">Get in touch</p>
+										<p class="footer-cat ui text size-textxl">Categories</p>
+										<p></p>
+									</div>
+									<div class="footer_info">
+										<div class="footer_contact-details">
+											<a href="mailto:support@ayurvedahubs.co.in" target="_blank"
+												rel="noreferrer">
+												<p class="footer_email-link ui text size-textlg">
+													support@ayurvedahubs.co.in</p>
+											</a>
+											<p class="footer_address ui text size-textlg">
+												Ayurvedahubs Pvt. Ltd.,<br />29-A, Duhai Industrial Area, <br />Duhai,<br />Ghaziabad
+												- 201204
+											</p>
+											<p class="footer_phone-number ui text size-textlg">+91
+												8958089580</p>
+										</div>
+										<ul class="footer_categories">
+											<li><a href="#">
+													<p class="ui text size-textlg">Shop All</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textlg">Hair care</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textlg">Skin Care</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textlg">Health care</p>
+											</a></li>
+										</ul>
+									</div>
+									<div class="footer_newsletter">
+										<div class="footer_newsletter-group">
+											<p class="footer_title ui text size-textxl">Newsletter</p>
+											<p class="footer_address ui text size-textlg">Subscribe
+												to our Newsletter and Join Ayurvedhic-hub Famly today!</p>
+										</div>
+										<div class="footer_app-download">
+											<p class="footer_title ui text size-textxl">Download
+												Ayurveda-Hub App</p>
+											<a href="#"> <img
+												src="IMG/Vector_Images/google-play-badge.jpg"
+												alt="App Download Image">
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="footer_bottom">
+									<div class="footer_information">
+										<p class="footer_title ui text size-textxl">Information</p>
+										<ul class="footer_information-list">
+											<li><a href="#">
+													<p class="ui text size-textmd">About us</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">Terms and Conditions</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">Privacy Policy</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">Privacy Policy for
+														Mobile Apps</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">Shipping and Returns
+														Policy</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">International Delivery</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">For Business, Hotels and
+														Resorts</p>
+											</a></li>
+										</ul>
+									</div>
+									<div class="footer_quick-links">
+										<p class="footer_title ui text size-textxl">Quick Links</p>
+										<ul class="footer_information-list">
+											<li><a href="#">
+													<p class="ui text size-textmd">My Account</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">Track Your Order</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">Recycle Projects</p>
+											</a></li>
+											<li><a href="#">
+													<p class="ui text size-textmd">FAQs</p>
+											</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer_copyright">
+							<p class="footer_copyright-text ui text">Copyright © 2024
+								Ayurveda Hub</p>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+		<div class="bottom-container" id="bottom_nav">
+			<div class="bottom-nav">
+				<a class="bottom_nav-section"> <img alt="Wishlist Icon"
+					src="IMG/Vector_Images/Heart_icon.svg" class="bottom-icons">Wishlist
+				</a> <a class="bottom_nav-section"> <img alt="cart Icon"
+					src="IMG/Vector_Images/Shopping cart_icon.svg" class="bottom-icons">Cart
+				</a> <a class="bottom_nav-section"> <img alt="Account Icon"
+					src="IMG/Vector_Images/User_icon.svg" class="bottom-icons">Home
+				</a>
+			</div>
+		</div>
+	</div>
+	<script src="JS/script.js">
+		
+	</script>
+</body>
+</html>

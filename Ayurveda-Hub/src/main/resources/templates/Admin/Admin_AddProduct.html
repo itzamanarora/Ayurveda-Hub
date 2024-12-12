@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="">
+    <title>Ayurveda Hub - Admin Dashboard</title>
+    <link rel="stylesheet" href="/CSS/Admin/Admin-Stylesheet.css">
+    <link rel="stylesheet" href="/CSS/HoverEffects.css">
+    <link rel="stylesheet" href="/CSS/Responsiveness.css">
+</head>
+
+<body>
+    <!-- Navbar Section Start -->
+    <div class="home">
+        <!-- Header Section -->
+        <header class="navbar">
+            <!-- Top Navbar Menu  -->
+            <div class="header_top-navbar">
+                <div class="header_top-navbar-group container-sm">
+                </div>
+            </div>
+            <!-- Navbar Menu with Title -->
+            <div class="header_main-navbar-row" id="navbar">
+                <div class="header_main-navbar-group container-sm">
+                    <div class="header_brand-group">
+                        <div class="header_brand-row">
+                            <a href="">
+                                <h2 class="header_brand-name ul heading size-headingxs">AYURVEDA HUB</h2>
+                            </a>
+                        </div>
+                        <!-- Navbar Menu  -->
+                        <div class="header_menu-group">
+                            <div class="header_menu-line"></div>
+                            <ul class="header_menu-row">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- ----------Hair Care products title-------------- -->
+	        <div class="text-section-1">
+	            <div class="section container-sm">
+	                <p class="section_title-1 ui text">Admin Panel</p>
+	            </div>
+	        </div>
+        </header>
+<!-- Navbar Section End  -->
+    
+<!-- ------------Side bar Start---------  -->
+
+        <aside class="sidebar">
+            <ul class="sidebar_menu">
+                    <li>
+                        <a href="/Admin" class="sidebar_text">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ViewOrders" class="sidebar_text" >
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseProduct" class="sidebar_text" style="background-color: var(--green_800); color: var(--yellow_50); border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseCategory" class="sidebar_text">
+                            Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                    Transaction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Review
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Help & Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Website Texts
+                        </a>
+                    </li>
+            </ul>
+        </aside>
+<!-- dashboard section start  -->
+        <div class="dashboard_row">
+            <div class="pannel">
+                <h1 class="pannel_heading">Add Products</h1>
+				<hr>
+            </div>
+                
+<!-- Form Start -->
+				<form action="/saveProducts" method="post" enctype="multipart/form-data" class="cat_field">
+<!-- Upload Product title -->
+				    <div class="admin_input">
+				        <label for="product_title" class="admin_input_label">Enter the Product Title:</label>
+				        <br>
+				        <input class="admin_input_fields" type="text" id="productTitle" name="productTitle" required>
+				    </div>
+<!-- Upload Product size -->
+				     <div class="admin_input">
+				        <label for="product_size" class="admin_input_label">Enter the Product Size:</label>
+				        <br>
+				        <input class="admin_input_fields" type="text" id="product_size" name="product_size" required>
+				    </div>
+<!-- Upload Product Description -->
+				    <div class="admin_input">
+				        <label for="product_desc" class="admin_input_label">Enter the Product Description:</label>
+				        <br>
+				        <textarea class="admin_input_fields" name="product_desc" id="product_desc" rows="5" cols="60"></textarea>
+				    </div>
+<!-- Upload Product ingredients -->
+				    <div class="admin_input">
+				        <label for="product_ingredient" class="admin_input_label">Enter the Product Ingredients:</label>
+				        <br>
+				        <textarea class="admin_input_fields" name="product_ingredient" id="product_ingredient" rows="5" cols="60"></textarea>
+				    </div>
+<!-- Upload Product  Information -->
+				    <div class="admin_input">
+				        <label for="product_ingredient" class="admin_input_label">Enter the Product Info:</label>
+				        <br>
+				        <textarea class="admin_input_fields" name="product_info" id="product_info" rows="5" cols="60"></textarea>
+				    </div>
+<!-- Upload Product Stock -->
+				    <div class="admin_input">
+				        <label for="product_stock" class="admin_input_label">Enter the Product Stock:</label>
+				        <br>
+				        <input class="admin_input_fields" type="number" id="product_stock" name="product_stock" required>
+				    </div>
+<!-- Upload Product Original Price -->
+				    <div class="admin_input">
+				        <label for="product_price" class="admin_input_label">Enter the Product Original Price:</label>
+				        <br>
+				        <input class="admin_input_fields" type="number" id="product_orgprice" name="product_orgprice" required>
+				    </div>
+<!-- Upload Product Current Price -->
+				    <div class="admin_input">
+				        <label for="product_price" class="admin_input_label">Enter the Product Current Price:</label>
+				        <br>
+				        <input class="admin_input_fields" type="number" id="product_price" name="product_price" required>
+				    </div>
+<!-- Choose Product Category Type -->
+				     <div class="admin_input">
+				        <label for="product_category_id" class="admin_input_label">Choose the Category Type:</label>
+				        <br>
+				         <select name="productCategorytype" id="categoryTypeSelect" class="admin_input_fields">
+					        <option value="">--Select--</option>
+					        <option value="HAIR">Hair</option>
+					        <option value="SKIN">Skin</option>
+					        <option value="HEALTH">Health</option>
+					    </select>
+				    </div>
+<!-- Choose Product Category -->
+				    <div class="admin_input">
+				        <label for="product_category_id" class="admin_input_label">Choose the Category:</label>
+				        <br>
+				         <select name="productCategory" class="admin_input_fields"  id="categorySelect">
+					        <option value="">--Select--</option>
+					        <option th:each="category : ${allCategories}" 
+					                th:value="${category.categoryname}" 
+					                th:text="${category.categoryname}"></option>
+					    </select>
+				    </div>
+<!-- Choose Product Status -->
+				    <div class="admin_input">
+				        <label for="product_status" class="admin_input_label">Choose the Status:</label>
+				         <input type="radio" name="product_status" id="product_status" style="margin-left:30px;">
+				         <label class="admin_input_label">Active</label>
+				         <input type="radio" name="product_status" id="product_status" style="margin-left:30px;">
+				         <label class="admin_input_label">Inactive</label>
+				    </div>
+<!-- Upload Product image -->
+					<!-- Image 1 -->
+					
+					 <div class="admin_input">
+				        <label for="file" class="admin_input_label">Choose the Product Images:</label>
+				        <br>
+				        <input class="admin_input_fields" type="file" name="file" id="file" required>
+				        <br>
+				    </div>
+					
+					<!-- Image 2 -->
+					
+					<div class="admin_input">
+				        <label for="file" class="admin_input_label">Choose the Product Images:</label>
+				        <br>
+				        <input class="admin_input_fields" type="file" name="file2" id="file2" required>
+				        <br>
+				    </div>
+					
+					<!-- Image 3 -->
+					
+					<div class="admin_input">
+				        <label for="file" class="admin_input_label">Choose the Product Images:</label>
+				        <br>
+				        <input class="admin_input_fields" type="file" name="file3" id="file3" required>
+				        <br>
+				    </div>
+					
+					<!-- Image 4 -->
+					
+				    <div class="admin_input">
+				        <label for="file" class="admin_input_label">Choose the Product Images:</label>
+				        <br>
+				        <input class="admin_input_fields" type="file" name="file4" id="file4" required>
+				        <br>
+<!-- Save the Product Details button -->
+				        <button type="submit" class="admin-submit">Save</button>
+				        <br>
+				        <br>
+				        <br>
+				    </div>
+<!-- Form End -->
+				</form>
+            </div>
+        </div>
+        <!-- ---------Dashboard section end----------- -->  
+</body>
+
+</html>

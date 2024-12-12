@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="">
+<title>Hair Quiz - Ayurveda-Hub</title>
+<link rel="stylesheet" href="/CSS/Stylesheet.css">
+<link rel="stylesheet" href="/CSS/HoverEffect.css">
+<link rel="stylesheet" href="/CSS/Animation.css">
+<link rel="stylesheet" href="/CSS/Responsive.css">
+<link rel="icon" type="icon" href="/IMG/Vector_Images/clove.svg">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+	<div class="home">
+		<!-- Header Section -->
+		<header>
+			<!-- Top Navbar Menu  -->
+			<div id="nav">
+				<div class="header_top-navbar">
+					<div class="header_top-navbar-group container-sm">
+						<div class="header_contact-group">
+							<a href="#"> <img src="/IMG/Vector_Images/call-image.svg"
+								alt="Call Image" class="header_contact-link">
+							</a>
+						</div>
+						<p class="header_email ui text">
+							<strong>+</strong>91 8958089580 | Ayurvedahub@gmail.com
+						</p>
+					</div>
+				</div>
+				<!-- Navbar Menu with Title -->
+				<div class="header_main-navbar-row">
+					<div class="header_main-navbar-group container-sm">
+						<div class="header_brand-group">
+							<div class="header_brand-row">
+								<a href="/">
+									<h2 class="header_brand-name ul heading size-headingxs">AYURVEDA
+										HUB</h2>
+								</a>
+								<div class="header_icons">
+									<a href="#"> <img src="/IMG/Vector_Images/Search_icon.svg"
+										alt="Search Icon" class="header_contact-link-1">
+									</a> <a onclick="opensignup(), closeScroll()"
+										style="cursor: pointer;"> <img
+										src="/IMG/Vector_Images/User_icon.svg" alt="User Icon"
+										class="header_contact-link-1">
+									</a> <a href="#" class="icon_container"> <img
+										src="/IMG/Vector_Images/Heart_icon.svg" alt="Heart Icon"
+										class="header_contact-link-1"> <span class="count-box">0</span>
+									</a> <a href="#" class="icon_container"> <img
+										src="/IMG/Vector_Images/Shopping cart_icon.svg"
+										alt="Cart Icon" class="header_contact-link-1"> <span
+										class="count-box-1">0</span>
+									</a>
+								</div>
+							</div>
+							<!-- List Navbar Menu  -->
+							<div class="header_menu-group">
+								<div class="header_menu-line"></div>
+								<ul class="header_menu-row">
+									<li><a href="/HairCare_Product">
+											<p class="nav ui text size-textml">Hair</p>
+									</a> <!-- Dropdown list for Hair -->
+										<ul class="dropdown-content">
+											<li th:each="haircategory : ${Category}"><a
+												href="/HairCare_Product"
+												th:text="${haircategory.categoryname}"></a></li>
+										</ul></li>
+									<li><a href="/SkinCare_Product">
+											<p class="nav ui text size-textml">Skin</p>
+									</a> <!-- Dropdown list for Skin -->
+										<ul class="dropdown-content">
+											<li th:each="skincategory : ${Category2}"><a
+												href="/SkinCare_Product"
+												th:text="${skincategory.categoryname}"></a></li>
+										</ul></li>
+									<li><a href="/Healthcare_Product">
+											<p class="nav ui text size-textml">Health</p>
+									</a> <!-- Dropdown list for Health -->
+										<ul class="dropdown-content">
+											<li th:each="skincategory : ${Category3}"><a
+												href="/HealthCare_Product"
+												th:text="${skincategory.categoryname}"></a></li>
+										</ul></li>
+									<li><a href="/All_Product">
+											<p class="nav ui text size-textml">All Products</p>
+									</a></li>
+									<li><a>
+											<p class="nav ui text size-textml">Community</p>
+									</a> <!-- Dropdown list for Community -->
+										<ul class="dropdown-content">
+											<li><a href="Choose_Quiz">Take a Quiz</a></li>
+											<li><a href="ComingSoon">Consult an Ayurvedhic
+													Expert</a></li>
+											<li><a href="E_Book">Download an E-Book</a></li>
+											<li><a href="ComingSoon">Find a TheRapist</a></li>
+										</ul></li>
+									<li><a href="ComingSoon">
+											<p class="nav ui text size-textml">About us</p>
+									</a></li>
+									<li><a href="ComingSoon">
+											<p class="nav ui text size-textml">Account</p>
+									</a></li>
+								</ul>
+							</div>
+							<!-- List Navbar End-->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- -----------------Sale Message------------- -->
+			<div class="sale-section-1">
+				<div class="section container-sm">
+					<p class="section_title-1 ui text">SALE! Get 10% OFF on any
+						item!</p>
+				</div>
+
+			</div>
+		</header>
+
+		<!--  Text  -->
+		<div class="text-section-1">
+			<div class="section container-sm">
+				<p class="section_title-1 ui text">Hair Quiz</p>
+			</div>
+		</div>
+		<section>
+
+			<!-- dashboard section start  -->
+			<div class="dashboard_row-1">
+				<div class="pannel1">
+					<div class="cart-container">
+
+						<form action="">
+							<!-- Cart Item -->
+							<div class="cart-item">
+								<div class="item-details">
+									<div class="product-info">
+										<h2 class="product-name" style="font-size: 1.5rem;">1. Where do you have fine lines, wrinkles, or dark spots?</h2>
+										<div class="quiz-options">
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_age"
+													value="forehead"> Forehead
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_age"
+													value="eyes"> Around eyes
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_age"
+													value="cheeks"> Cheeks
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_age"
+													value="mouth"> Around mouth
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_age"
+													value="Chin"> Chin
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br><br>
+							<div class="cart-item">
+								<div class="item-details">
+									<div class="product-info">
+										<h2 class="product-name" style="font-size: 1.5rem;">2. What are the prominent things you noticed about your skin?</h2>
+										<div class="quiz-options">
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_type"
+													value="blemishes"> Blemishes
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_type"
+													value="largepores"> Large pores
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_type"
+													value="flaky"> Flaky
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_type"
+													value="rough"> Rough
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_type"
+													value="none"> None of the above
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br><br>
+							<div class="cart-item">
+								<div class="item-details">
+									<div class="product-info">
+										<h2 class="product-name" style="font-size: 1.5rem;">3. What are the major concerns you are facing??</h2>
+										<div class="quiz-options">
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_facing"
+													value="acne"> Face and body acne
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_facing"
+													value="psoriasis"> Psoriasis
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_facing"
+													value="eczema"> Eczema
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_facing"
+													value="vitiligo"> Vitiligo
+												</label>
+											</div>
+											<div class="radio-input">
+												<label> <input type="radio" name="skin_facing"
+													value="sunburn"> Skin tan and sub burn
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Total Section -->
+							<div class="total-section">
+								<button class="checkout-btn" style="font-size: 1.2rem;">Submit your Quiz.</button>
+							</div>
+						</form>
+					</div>
+		</section>
+		<!-- Footer  -->
+		<footer class="footer">
+			<div>
+				<div class="footer_content">
+					<div class="footer_top">
+						<div class="footer_contact">
+							<p class="footer_title ui text size-textxl">Get in touch</p>
+							<p class="footer-cat ui text size-textxl">Categories</p>
+							<p></p>
+						</div>
+						<div class="footer_info">
+							<div class="footer_contact-details">
+								<a href="mailto:support@ayurvedahubs.co.in" target="_blank"
+									rel="noreferrer">
+									<p class="footer_email-link ui text size-textlg">
+										support@ayurvedahubs.co.in</p>
+								</a>
+								<p class="footer_address ui text size-textlg">
+									Ayurvedahubs Pvt. Ltd.,<br />29-A, Duhai Industrial Area, <br />Duhai,<br />Ghaziabad
+									- 201204
+								</p>
+								<p class="footer_phone-number ui text size-textlg">+91
+									8958089580</p>
+							</div>
+							<ul class="footer_categories">
+								<li><a href="#">
+										<p class="ui text size-textlg">Shop All</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textlg">Hair care</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textlg">Skin Care</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textlg">Health care</p>
+								</a></li>
+							</ul>
+						</div>
+						<div class="footer_newsletter">
+							<div class="footer_newsletter-group">
+								<p class="footer_title ui text size-textxl">Newsletter</p>
+								<p class="footer_address ui text size-textlg">Subscribe to
+									our Newsletter and Join Ayurvedhic-hub Famly today!</p>
+							</div>
+							<div class="footer_app-download">
+								<p class="footer_title ui text size-textxl">Download
+									Ayurveda-Hub App</p>
+								<a href="#"> <img
+									src="/IMG/Vector_Images/google-play-badge.jpg"
+									alt="App Download Image">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="footer_bottom">
+						<div class="footer_information">
+							<p class="footer_title ui text size-textxl">Information</p>
+							<ul class="footer_information-list">
+								<li><a href="#">
+										<p class="ui text size-textmd">About us</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">Terms and Conditions</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">Privacy Policy</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">Privacy Policy for Mobile
+											Apps</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">Shipping and Returns Policy</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">International Delivery</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">For Business, Hotels and
+											Resorts</p>
+								</a></li>
+							</ul>
+						</div>
+						<div class="footer_quick-links">
+							<p class="footer_title ui text size-textxl">Quick Links</p>
+							<ul class="footer_information-list">
+								<li><a href="#">
+										<p class="ui text size-textmd">My Account</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">Track Your Order</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">Recycle Projects</p>
+								</a></li>
+								<li><a href="#">
+										<p class="ui text size-textmd">FAQs</p>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_copyright">
+				<p class="footer_copyright-text ui text">Copyright © 2024
+					Ayurveda Hub</p>
+			</div>
+		</footer>
+	</div>
+	</div>
+	</div>
+	<div class="bottom-container" id="bottom_nav">
+		<div class="bottom-nav">
+			<a class="bottom_nav-section"> <img alt="Wishlist Icon"
+				src="IMG/Vector_Images/Heart_icon.svg" class="bottom-icons">Wishlist
+			</a> <a class="bottom_nav-section"> <img alt="cart Icon"
+				src="IMG/Vector_Images/Shopping cart_icon.svg" class="bottom-icons">Cart
+			</a> <a class="bottom_nav-section"> <img alt="Account Icon"
+				src="IMG/Vector_Images/User_icon.svg" class="bottom-icons">Home
+			</a>
+		</div>
+	</div>
+	</div>
+	<script src="JS/script.js">
+		
+	</script>
+</body>
+</html>

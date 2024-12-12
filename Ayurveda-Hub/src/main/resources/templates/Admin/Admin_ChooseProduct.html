@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="">
+    <title>Ayurveda Hub - Admin Dashboard</title>
+    <link rel="stylesheet" href="/CSS/Admin/Admin-Stylesheet.css">
+</head>
+
+<body>
+    <!-- Navbar Section Start -->
+    <div class="home">
+        <!-- Header Section -->
+        <header class="navbar">
+            <!-- Top Navbar Menu  -->
+            <div class="header_top-navbar">
+                <div class="header_top-navbar-group container-sm">
+                </div>
+            </div>
+            <!-- Navbar Menu with Title -->
+            <div class="header_main-navbar-row" id="navbar">
+                <div class="header_main-navbar-group container-sm">
+                    <div class="header_brand-group">
+                        <div class="header_brand-row">
+                            <a href="/Admin">
+                                <h2 class="header_brand-name ul heading size-headingxs">AYURVEDA HUB</h2>
+                            </a>
+                        </div>
+                        <!-- Navbar Menu  -->
+                        <div class="header_menu-group">
+                            <div class="header_menu-line"></div>
+                            <ul class="header_menu-row">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	        <!-- ----------Hair Care products title-------------- -->
+	        <div class="text-section-1">
+	            <div class="section container-sm">
+	                <p class="section_title-1 ui text">Admin Panel</p>
+	            </div>
+	        </div>
+	        
+        </header>
+        <!-- Navbar Section End  -->
+    <!-- ------------Side bar Start---------  -->
+
+        <aside class="sidebar">
+            <ul class="sidebar_menu">
+                    <li>
+                        <a href="/Admin" class="sidebar_text">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ViewOrders" class="sidebar_text">
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseProduct" class="sidebar_text" style="background-color: var(--green_800); color: var(--yellow_50); border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseCategory" class="sidebar_text">
+                            Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                    Transaction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Review
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Help & Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Website Texts
+                        </a>
+                    </li>
+            </ul>
+        </aside>
+        
+        <!-- dashboard section start  -->
+        <div class="dashboard_row">
+        <h1 class="pannel_heading" style="padding-top: 3rem;">Products Option</h1>
+            <div class="dashboard_grid">
+                <div class="dashboard_box-1">
+                    <p class="dashboard_box_text">Hair Products</p>
+                    <p class="dashboard_box_text-2">Products Count: <span th:text ="${hairCount}"></span></p>
+                    <a href="/Admin/Admin_ViewProduct?type=HAIR" class="admin-submit-1">View Products</a>
+                </div>
+                <div class="dashboard_box-1">
+                    <p class="dashboard_box_text">Skin Products</p>
+                    <p class="dashboard_box_text-2">Products Count: <span th:text ="${skinCount}"></span></p>
+                    <a href="/Admin/Admin_ViewProduct?type=SKIN" class="admin-submit-1">View Products</a>
+                </div>
+                <div class="dashboard_box-1">
+                    <p class="dashboard_box_text">Health Products</p>
+                    <p class="dashboard_box_text-2">Products Count: <span th:text ="${healthCount}"></span></p>
+                    <a href="/Admin/Admin_ViewProduct?type=HEALTH" class="admin-submit-1">View Products</a>
+                </div>
+            </div>
+        </div>
+        <!-- dashboard section End  -->
+    </div>  
+</body>
+
+</html>

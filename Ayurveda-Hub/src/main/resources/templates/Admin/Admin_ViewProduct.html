@@ -1,0 +1,234 @@
+	<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="">
+    <title>Ayurveda Hub - Admin Dashboard</title>
+    <link rel="stylesheet" href="/CSS/Admin/Admin-Stylesheet.css">
+</head>
+
+<body>
+    <!-- Navbar Section Start -->
+    <div class="home" >
+        <!-- Header Section -->
+        <header class="navbar">
+            <!-- Top Navbar Menu  -->
+            <div class="header_top-navbar">
+                <div class="header_top-navbar-group container-sm">
+                </div>
+            </div>
+            <!-- Navbar Menu with Title -->
+            <div class="header_main-navbar-row" id="navbar">
+                <div class="header_main-navbar-group container-sm">
+                    <div class="header_brand-group">
+                        <div class="header_brand-row">
+                            <a href="/Admin">
+                                <h2 class="header_brand-name ul heading size-headingxs">AYURVEDA HUB</h2>
+                            </a>
+                        </div>
+                        <!-- Navbar Menu  -->
+                        <div class="header_menu-group">
+                            <div class="header_menu-line"></div>
+                            <ul class="header_menu-row">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!-- ----------Hair Care products title-------------- -->
+	        <div class="text-section-1">
+	            <div class="section container-sm">
+	                <p class="section_title-1 ui text">Admin Panel</p>
+	            </div>
+	        </div>
+        </header>
+        <!-- Navbar Section End  -->
+        
+    
+    <!-- ------------Side bar Start---------  -->
+
+        <aside class="sidebar">
+            <ul class="sidebar_menu">
+                    <li>
+                        <a href="/Admin" class="sidebar_text">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ViewOrders" class="sidebar_text">
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseProduct" class="sidebar_text" style="background-color: var(--green_800); color: var(--yellow_50); border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseCategory" class="sidebar_text">
+                            Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ComingSoon" class="sidebar_text">
+                    Transaction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ComingSoon" class="sidebar_text">
+                            Review
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ComingSoon" class="sidebar_text">
+                            Help & Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ComingSoon" class="sidebar_text">
+                            Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ComingSoon" class="sidebar_text">
+                            Website Texts
+                        </a>
+                    </li>
+            </ul>
+        </aside>
+        <!-- dashboard section start  -->
+        <div class="dashboard_row">
+            <div class="pannel">
+                <h1 class="pannel_heading">Products List</h1>
+                <br>
+                <!-- View Content count, filter and add button -->
+				<div style ="display: flex; justify-content: space-between; align-items: center; margin: 0  1.5rem; height: 4rem;">
+				
+				<!-- Shows the count of the category -->
+				<p class="dashboard_box_text-2" style="margin-top: 10px; color: var(--green_800);">Category Count: <span th:text ="${hairCount}"></span></p>
+				
+				<!-- To change the filter in the view -->
+				<select class="admin_input_fields">
+					<option>--Select--</option>
+				</select>
+				
+				<!-- To add a new Category in the database -->
+				<a href="/Admin/Admin_AddProduct"><img
+					src="/IMG/Vector_Images/Add.svg" alt="logo"
+					class="admin-small_button"></a>
+				</div>
+                <hr>
+                <br>
+                <div class="pannel_text">
+                    <p class="Text1">Product Image</p>
+                    <p class="Text2">Product Details</p>
+                    <p class="Text3">Selling, Quantity, Price and Discount </p>
+                </div>
+                
+                <!-- Product Successfully delete text -->
+                <div th:if="${message}" class="alert alert-success" style="display: flex; justify-content: center;">
+                	<hr>
+				    <p th:text="${message}" class="Text2" style="color: red;"></p>
+				</div>
+				<div th:if="${error}" class="alert alert-danger">
+					<hr>
+				    <p th:text="${error}"></p>
+				</div>
+				
+				<!-- If product is 0. -->
+				<div class="pannel_text" style="display: flex; justify-content: center;">
+                    <h1 class="Text2" style="margin: 0; color: red;" th:text="${session.no_product}"></h1>
+                </div>
+                
+                <!-- -----------Pannel Start-------------  -->
+                <div class="pannel_container" th:each="product : ${Products}">
+                    <div class="list_image">
+					    <div class="slider-container">
+					        <div class="slider-images">
+					            <img th:src="${product.product_image_url != null and !#strings.isEmpty(product.product_image_url) ? '/IMG/Product-Images/' + product.product_image_url : '/IMG/301294.jpg'}" alt="Product Image" class="slide">
+					            <img th:src="${product.product_image_url2 != null and !#strings.isEmpty(product.product_image_url2) ? '/IMG/Product-Images/' + product.product_image_url2 : '/IMG/301294.jpg'}" alt="Product Image 2" class="slide">
+					            <img th:src="${product.product_image_url3 != null and !#strings.isEmpty(product.product_image_url3) ? '/IMG/Product-Images/' + product.product_image_url3 : '/IMG/301294.jpg'}" alt="Product Image 3" class="slide">
+					            <img th:src="${product.product_image_url4 != null and !#strings.isEmpty(product.product_image_url4) ? '/IMG/Product-Images/' + product.product_image_url4 : '/IMG/301294.jpg'}" alt="Product Image 4" class="slide">
+					        </div>
+					    </div>
+					</div>
+					
+					<script >
+					
+					// JavaScript to create the auto-slide effect
+					let index = 0;  // To keep track of the current slide
+					const slides = document.querySelectorAll('.slide');  // Get all the images in the slider
+					const totalSlides = slides.length;  // Get the total number of slides
+
+					function showNextSlide() {
+					    index++;
+					    if (index >= totalSlides) {
+					        index = 0;  // Reset to the first slide when reaching the last slide
+					    }
+					    updateSlider();
+					}
+
+					function updateSlider() {
+					    // Move the slider to the appropriate position for the current image
+					    document.querySelector('.slider-images').style.transform = `translateX(-${index * 100}%)`;
+					}
+
+					// Set an interval to automatically change slides every 3 seconds
+					setInterval(showNextSlide, 3000);  // 3000ms = 3 seconds
+
+					</script>
+
+                    <div class="vl"></div>
+                    <div class="pannel_inner_container">
+                        <p class="product_info">Product Id: <span th:text=" ${product.product_id}"></span></p>
+                        <br>
+                        <p class="product_info">Title: <span th:text=" ${product.productTitle}"></span> (<span th:text=" ${product.product_size}"></span>)</p>
+                        <br>
+                        <br>
+                        <p class="product_info">Category type & Category: <span th:text=" ${product.productCategorytype}"></span> | <span th:text= " ${product.productCategory}"></span></p>
+                    </div>
+                    <div class="vl"></div>
+                    <div class="pannel_inner_container">
+                        <p class="product_info">Selling Unit: 0</p>
+                        <br>
+                        <br>
+                        <br>
+                        <p class="product_info">Discount: 10%</p>
+                        <br>
+                        <br>
+                        <br>
+                        <p class="product_info">Stock: <span th:text=" ${product.product_stock}"></span></p>
+                        <!-- <br> -->
+                        <!-- <br> -->
+                        <!-- <p class="product_info"></p> -->
+                    </div>
+                    <div class="pannel_inner_container">
+                        <p class="product_info">Original Price: ₹<span th:text= "${product.product_orgprice}"></span></p>
+                        <br>
+                        <br>
+                        <p class="product_info">Current Price: ₹<span th:text=" ${product.product_price}"></span></p>
+                        <br>
+                        <br>
+                        <p class="product_info">Total Earning: ₹0</p>
+                        <br>
+                        <br>
+                        <p class="product_info">Product show Status: <span th:text=" ${product.product_status}"></span></p>
+                    </div>
+                    <div class="edit_buttons">
+		                    <a th:href="@{'/Admin_EditProduct/' + ${product.product_id}}" onclick="return confirm('Are you sure you want to Edit this product.');"
+		                    ><img src="/IMG/Vector_Images/edit.svg" alt="logo" class="admin-small_button_edit"></a>
+		                    <a th:href="@{'/deleteProduct/' + ${product.product_id}}" onclick="return confirm('Are you sure you want to delete this product.');"
+		                    ><img src="/IMG/Vector_Images/close.svg" alt="logo" class="admin-small_button_exit"></a>
+                		</div>
+                </div>
+                <!-- -------Pannel End---------  -->
+            </div>
+        </div>
+        <!-- ---------Dashboard section end----------- -->
+    </div>  
+</body>
+
+</html>

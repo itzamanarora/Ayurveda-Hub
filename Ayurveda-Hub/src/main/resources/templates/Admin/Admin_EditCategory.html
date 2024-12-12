@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="">
+    <title>Ayurveda Hub - Admin Dashboard</title>
+    <link rel="stylesheet" href="/CSS/Admin/Admin-Stylesheet.css">
+    <link rel="stylesheet" href="/CSS/HoverEffects.css">
+    <link rel="stylesheet" href="/CSS/Responsiveness.css">
+    <link rel="stylesheet" href="/Admin/Admin-Stylesheet.css">
+</head>
+
+<body>
+    <!-- Navbar Section Start -->
+    <div class="home">
+        <!-- Header Section -->
+        <header class="navbar">
+            <!-- Top Navbar Menu  -->
+            <div class="header_top-navbar">
+                <div class="header_top-navbar-group container-sm">
+                </div>
+            </div>
+            <!-- Navbar Menu with Title -->
+            <div class="header_main-navbar-row" id="navbar">
+                <div class="header_main-navbar-group container-sm">
+                    <div class="header_brand-group">
+                        <div class="header_brand-row">
+                            <a href="">
+                                <h2 class="header_brand-name ul heading size-headingxs">AYURVEDA HUB</h2>
+                            </a>
+                        </div>
+                        <!-- Navbar Menu  -->
+                        <div class="header_menu-group">
+                            <div class="header_menu-line"></div>
+                            <ul class="header_menu-row">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- ----------Hair Care products title-------------- -->
+	        <div class="text-section-1">
+	            <div class="section container-sm">
+	                <p class="section_title-1 ui text">Admin Panel</p>
+	            </div>
+	        </div>
+        </header>
+        <!-- Navbar Section End  -->
+       
+    
+    <!-- ------------Side bar Start---------  -->
+
+        <aside class="sidebar">
+            <ul class="sidebar_menu">
+                    <li>
+                        <a href="/Admin" class="sidebar_text">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ViewOrders" class="sidebar_text" >
+                            Orders
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseProduct" class="sidebar_text">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/Admin_ChooseCategory" class="sidebar_text" style="background-color: var(--green_800); color: var(--yellow_50); border-top: 1px solid rgba(0, 0, 0, 0.1);">
+                            Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                    Transaction
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Review
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Help & Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Accounts
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="sidebar_text">
+                            Website Texts
+                        </a>
+                    </li>
+            </ul>
+        </aside>
+        <!-- dashboard section start  -->
+        <div class="dashboard_row">
+            <div class="pannel">
+                <h1 class="pannel_heading">Edit Product</h1>
+				<hr>
+                </div>
+				<form  class="cat_field"  method="POST" action="/updateCategory" enctype="multipart/form-data">
+				         <input type="hidden" name="id" value="${category.id}">
+				    <div class="admin_input">
+				        <label for="product_category_name" class="admin_input_label">Choose the Category:</label>
+				        <br>
+				         <select name="category_id" id="category_id" class="admin_input_fields" >
+   								<option th:each= "category : ${Category}" th:value="${category.category_name}" th:text="${category.category_name}"></option>
+						 </select>
+				         
+				    </div>
+				    <div class="admin_input">
+				        <label for="status" class="admin_input_label">Choose the Status:</label>
+				         <input type="radio" name="status" id="status" style="margin-left:30px;" th:checked="${category.status == 'on'}">
+				         <label class="admin_input_label">Active</label>
+				         <input type="radio" name="status" id="status" style="margin-left:30px;" th:checked="${category.status == 'off'}">
+				         <label class="admin_input_label">Inactive</label>
+				         <br>
+				        <button type="submit" class="admin-submit" onclick="return confirm('Are you sure you want to change this?');">Save Changes!</button>
+				        <br>
+				        <br>
+				        <br>
+				    </div>
+				</form>
+
+            </div>
+        </div>
+        <!-- ---------Dashboard section end----------- -->
+    </div>  
+</body>
+
+</html>
